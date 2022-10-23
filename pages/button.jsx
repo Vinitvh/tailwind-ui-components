@@ -1,23 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Editor from 'react-simple-code-editor';
 import Prism from 'prismjs';
 
 const Button = () => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+  const [code, setCode] = useState(
+    "<button className='py-2 px-6 rounded bg-blue-600'>Click!</button>"
+  );
 
   return (
     <section>
       <h1 className='text-2xl text-center py-10'>Button</h1>
       <div className='w-80 md:w-full h-40 m-auto bg-veryDarkBlue rounded-md'>
         <div className='flex justify-center items-center h-full'>
-          <button className='py-2 px-6 bg-blue-600 rounded'>Click!</button>
+          <button className={`${code}`}>Click!</button>
         </div>
       </div>
-      <div className='w-80 md:w-full h-40 m-auto py-4 rounded-md'>
-        <pre>
-          <code className='language-markup'>{`<button className='py-2 px-6 bg-blue-600 rounded'>Click!</button>`}</code>
-        </pre>
+      <div className='w-80 md:w-full h-20 m-auto rounded-md bg-black'>
+        <Editor
+          value={code}
+          onValueChange={code => setCode(code)}
+          highlight={code =>
+            Prism.highlight(code, Prism.languages.markup, 'markup')
+          }
+          padding={10}
+          preClassName='language-css'
+        />
       </div>
     </section>
   );

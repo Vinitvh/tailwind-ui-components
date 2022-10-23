@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         <Sidebar />
         <div className='flex-1'>
           <Navbar />
-          <main className='flex flex-col items-center h-80'>{children}</main>
+          <div className='flex flex-col items-center h-80'>{children}</div>
         </div>
       </div>
     </>
