@@ -8,8 +8,8 @@ const Dropdown = () => {
 
   return (
     <section>
-      <h1 className='text-2xl text-center py-10'>Button</h1>
-      <div className='w-80 md:w-full h-40 m-auto bg-veryDarkBlue rounded-md'>
+      <h1 className='text-2xl text-center py-10 text-secondary'>Dropdown</h1>
+      <div className='w-80 md:w-full h-40 m-auto bg-lightGrayishCyan rounded-md'>
         <div className='flex justify-center items-center h-full'>
           <select
             name='fruits'

@@ -8,8 +8,8 @@ const Badges = () => {
 
   return (
     <section>
-      <h1 className='text-2xl text-center py-10'>Badges</h1>
-      <div className='w-80 md:w-full h-40 m-auto bg-veryDarkBlue rounded-md'>
+      <h1 className='text-2xl text-center py-10 text-secondary'>Badges</h1>
+      <div className='w-80 md:w-full h-40 m-auto bg-lightGrayishCyan rounded-md'>
         <div className='flex justify-center items-center h-full text-black'>
           <button className='px-6 bg-blue-400 rounded-full mx-2'>info</button>
           <button className='px-6 bg-green-600 rounded-full mx-2'>
