@@ -1,29 +1,51 @@
-name: 🐛 Bug
-description: Submit a bug report to help us improve
-title: '🐛 Bug: '
+name: Bug Report
+description: File a bug report.
 labels: ['bug']
+assignees:
+  - yaroslav
 body:
   - type: markdown
     attributes:
-      value: Thanks for taking the time to fill out our bug report form 🙏
+      value: |
+        Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: description
+    id: bug-description
     attributes:
-      label: Description
-      description: A brief description of the bug. What happened? What did you expect to happen?
+      label: What happened?
+      description: Please describe the bug.
+      placeholder: Description of the bug.
     validations:
       required: true
   - type: textarea
-    id: steps
+    id: steps-to-reproduce
     attributes:
-      label: Steps to reproduce
-      description: How do you trigger this bug? Please walk us through it step by step.
+      label: What are the steps to reproduce?
+      description: Please describe the steps to reproduce the bug.
+      placeholder: |
+        Step 1: ...
+        Step 2: ...
+        Step 3: ...
     validations:
       required: true
   - type: textarea
-    id: screenshots
+    id: expected-behavior
     attributes:
-      label: Screenshots
-      description: Please add screenshots if applicable
+      label: What is the expected behavior?
+      description: Please describe the behavior you expect of Runestone.
+      placeholder: I expect that Runestone would...
     validations:
-      required: false
+      required: true
+  - type: textarea
+    id: error-thrown
+    attributes:
+      label: What is the error thrown?
+      description: Please provide the exact error thrown.
+    validations:
+      required: true
+  - type: textarea
+    id: source-path
+    attributes:
+      label: What is the exact source path?
+      description: Please provide the exact source path i.e lines that fails.
+    validations:
+      required: true
