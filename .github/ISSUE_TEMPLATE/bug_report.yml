@@ -2,7 +2,6 @@ name: Bug Report
 description: File a bug report.
 labels: ['bug']
 assignees:
-  - yaroslav
 body:
   - type: markdown
     attributes:
@@ -31,8 +30,8 @@ body:
     id: expected-behavior
     attributes:
       label: What is the expected behavior?
-      description: Please describe the behavior you expect of Runestone.
-      placeholder: I expect that Runestone would...
+      description: Please describe the behavior you expect.
+      placeholder: I expect that...
     validations:
       required: true
   - type: textarea
@@ -40,12 +39,14 @@ body:
     attributes:
       label: What is the error thrown?
       description: Please provide the exact error thrown.
+      placeholder: This is the unexpected behaviour...
     validations:
       required: true
   - type: textarea
     id: source-path
     attributes:
       label: What is the exact source path?
-      description: Please provide the exact source path i.e lines that fails.
+      description: Please provide the exact source path.
+      placeholder: Given method or property failing..
     validations:
       required: true
